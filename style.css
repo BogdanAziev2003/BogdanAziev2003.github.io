@@ -63,12 +63,38 @@ a{
     border-top: 2px solid var(--second-color);
     border-bottom: 2px solid var(--second-color);
     cursor: pointer;
+    position: relative;
 }
 
 .header__menu span{
     width: 100%;
     height: 2px;
     background-color: var(--second-color);
+}
+
+.menu{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    top: 60px;
+    left: 0;
+    padding-left: 10px;
+    z-index: 100;
+    transition: .4s ease-in;
+}
+
+.menu__item{
+    margin-top: 20px;
+    font-size: 20px;
+    width: fit-content;
+    /* border: 1px solid red; */
+    cursor: pointer;
+    color: var(--second-color)
+}
+
+.menu_none{
+    transform: translateY(calc(-100% - 60px))
 }
 
 
