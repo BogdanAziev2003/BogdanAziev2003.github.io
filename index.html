@@ -1,130 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Unbounded:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="header__logo">
-                <img src="logo.png" alt="">
-            </div>
-            <div class="header__menu">
-                <div class="menu">
-                    <div class="menu__item">
-                        <p>Главная</p>
-                    </div>
-                    <div class="menu__item">
-                        <p>Сендвичи</p>
-                    </div>
-                    <div class="menu__item">
-                        <p>Бургеры</p>
-                    </div>
-                    <div class="menu__item">
-                        <p>Картошка</p>
-                    </div>
-                    <div class="menu__item">
-                        <p>Напитки</p>
-                    </div>
-                </div>
-            </div>
-        </header>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Will you marry me?</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
 
-        <div class="main">
-            <div class="item">
-                <div class="item__photo">
-                    <img src="burger.jpeg" alt="">
-                </div>
-                <div class="item__info">
-                    <div class="item__info-block">
-                        <div class="item__name">
-                            <p>Гамбургер класический</p>
-                        </div>
-                        <div class="item__description">
-                            <p><i>котлета, сыр, лук, холопенье</i></p>
-                        </div>
-                    </div>
-                    
-                    <div class="item__add">
-                        <div class="item__add-block">
-                            <div class="item__add-plus">
-                                <p>+</p>
-                            </div>
-                            <div class="item__add-price">
-                                <p>420 ₽</p>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="item">
-                <div class="item__photo">
-                    <img src="burger.jpeg" alt="">
-                </div>
-                <div class="item__info">
-                    <div class="item__info-block">
-                        <div class="item__name">
-                            <p>Гамбургер </p>
-                        </div>
-                        <div class="item__description">
-                            <p><i>котлета, сыр, лук, холопенье</i></p>
-                        </div>
-                    </div>
-                    
-                    <div class="item__add item__add_click">
-                        <div class="item__add-block">
-                            <div class="item__add-plus">
-                                <p>+</p>
-                            </div>
-                            <div class="item__add-amount">
-                                <p>2</p>
-                            </div>
-                            <div class="item__add-minus">
-                                <p>-</p>
-                            </div>
-                            </div>
-                            <div class="item__add-modifier">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-500v-220h220v220H240Zm0 260v-220h220v220H240Zm260-260v-220h220v220H500Zm0 260v-220h220v220H500ZM320-580h60v-60h-60v60Zm260 0h60v-60h-60v60ZM320-320h60v-60h-60v60Zm260 0h60v-60h-60v60ZM380-580Zm200 0Zm0 200Zm-200 0ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Z"/></svg>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item__photo">
-                    <img src="burger.jpeg" alt="">
-                </div>
-                <div class="item__info">
-                    <div class="item__info-block">
-                        <div class="item__name">
-                            <p>Гамбургер </p>
-                        </div>
-                        <div class="item__description">
-                            <p><i>котлета, сыр, лук, холопенье</i></p>
-                        </div>
-                    </div>
-                    
-                    <div class="item__add">
-                        <div class="item__add-plus">
-                            <p>+</p>
-                        </div>
-                        <div class="item__add-price">
-                            <p>420 ₽</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            
-            
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
     </div>
-
-    <script src="main.js"></script>
-</body>
+  </body>
 </html>
-
